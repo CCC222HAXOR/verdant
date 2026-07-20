@@ -5,6 +5,8 @@ import './styles/global.css'
 import './styles/checker.css'
 import './styles/howitworks.css'
 import './styles/faq.css'
+import './styles/ticker.css'
+import './styles/footer.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

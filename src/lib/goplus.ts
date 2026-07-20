@@ -4,14 +4,19 @@ export interface EvmChainOption {
   id: string
   chainId: string
   label: string
+  explorerBase: string
+  featured?: boolean
 }
 
+// Robinhood Chain is listed first and used as the default selection — it's an
+// Arbitrum-powered EVM L2 (chain ID 4663) and the network this scanner is built around.
 export const EVM_CHAINS: EvmChainOption[] = [
-  { id: 'eth', chainId: '1', label: 'Ethereum' },
-  { id: 'bsc', chainId: '56', label: 'BNB Chain' },
-  { id: 'base', chainId: '8453', label: 'Base' },
-  { id: 'polygon', chainId: '137', label: 'Polygon' },
-  { id: 'arbitrum', chainId: '42161', label: 'Arbitrum' },
+  { id: 'robinhood', chainId: '4663', label: 'Robinhood Chain', explorerBase: 'https://robinhoodchain.blockscout.com', featured: true },
+  { id: 'eth', chainId: '1', label: 'Ethereum', explorerBase: 'https://etherscan.io' },
+  { id: 'bsc', chainId: '56', label: 'BNB Chain', explorerBase: 'https://bscscan.com' },
+  { id: 'base', chainId: '8453', label: 'Base', explorerBase: 'https://basescan.org' },
+  { id: 'polygon', chainId: '137', label: 'Polygon', explorerBase: 'https://polygonscan.com' },
+  { id: 'arbitrum', chainId: '42161', label: 'Arbitrum', explorerBase: 'https://arbiscan.io' },
 ]
 
 export type CheckStatus = 'good' | 'warn' | 'danger' | 'unknown'
@@ -30,6 +35,7 @@ export interface ScanResult {
   tokenSymbol: string | null
   checks: Check[]
   verdict: Verdict
+  explorerUrl: string | null
   raw: unknown
 }
 
@@ -171,11 +177,14 @@ export async function scanEvmToken(chainId: string, address: string): Promise<Sc
     detail: `Buy tax ${pct(result.buy_tax)}, sell tax ${pct(result.sell_tax)}.`,
   })
 
+  const chain = EVM_CHAINS.find((c) => c.chainId === chainId)
+
   return {
     tokenName: result.token_name ?? null,
     tokenSymbol: result.token_symbol ?? null,
     checks,
     verdict: verdictFromChecks(checks),
+    explorerUrl: chain ? `${chain.explorerBase}/token/${address.toLowerCase()}` : null,
     raw: result,
   }
 }
@@ -269,6 +278,7 @@ export async function scanSolanaToken(mintAddress: string): Promise<ScanResult> 
     tokenSymbol: result.metadata?.symbol || null,
     checks,
     verdict: verdictFromChecks(checks),
+    explorerUrl: `https://solscan.io/token/${mintAddress}`,
     raw: result,
   }
 }

@@ -14,7 +14,8 @@ export default function Hero() {
           <strong>to catch rugs before they catch you</strong>
         </h1>
         <p className="hero-sub">
-          Fully automated token risk scanner for EVM and Solana.
+          Fully automated token risk scanner — built first for Robinhood Chain, plus every major EVM network and
+          Solana.
           <br />
           Paste a contract or mint address and get an instant verdict.
         </p>

@@ -3,7 +3,11 @@ import { useState } from 'react'
 const faqs = [
   {
     q: 'What chains are supported?',
-    a: 'Ethereum, BNB Chain, Base, Polygon, and Arbitrum on the EVM side, plus Solana.',
+    a: 'Robinhood Chain first and foremost (chain ID 4663), plus Ethereum, BNB Chain, Base, Polygon, and Arbitrum on the EVM side, and Solana.',
+  },
+  {
+    q: 'Why build around Robinhood Chain?',
+    a: "It's an Arbitrum-powered EVM L2 that launched with Uniswap v2/v3/v4 live on day one — every check VERDANT runs is tuned and tested there first, before rolling out to other networks.",
   },
   {
     q: 'Where does the scan data come from?',

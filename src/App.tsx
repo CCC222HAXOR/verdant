@@ -4,6 +4,8 @@ import ChainsRow from './components/ChainsRow'
 import HowItWorks from './components/HowItWorks'
 import Checker from './components/Checker'
 import Faq from './components/Faq'
+import Ticker from './components/Ticker'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
@@ -14,6 +16,8 @@ export default function App() {
       <HowItWorks />
       <Checker />
       <Faq />
+      <Ticker />
+      <Footer />
     </>
   )
 }

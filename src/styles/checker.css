@@ -112,10 +112,26 @@
 .verdict-banner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
   padding: 16px 20px;
   border-radius: 12px;
   margin-bottom: 20px;
   border: 1px solid var(--border);
+}
+
+.explorer-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.explorer-link:hover {
+  border-bottom-color: currentColor;
 }
 
 .verdict-banner > div {
@@ -240,6 +256,12 @@
 
   .checker-inputs {
     flex-direction: column;
+  }
+
+  .chain-select,
+  .address-input {
+    flex: 0 0 auto;
+    width: 100%;
   }
 
   .scan-btn {

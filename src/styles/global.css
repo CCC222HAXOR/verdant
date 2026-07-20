@@ -452,13 +452,114 @@ nav.navbar {
 
 /* ===================== BRANDS / CHAINS ROW ===================== */
 
-.brands {
+.chains-section {
   width: 100%;
   max-width: 1600px;
+  padding: 36px 24px 10px;
+}
+
+.featured-chain {
   display: flex;
   align-items: center;
-  gap: 64px;
-  padding: 32px 24px 10px;
+  gap: 20px;
+  background: linear-gradient(135deg, rgba(0, 230, 118, 0.1), rgba(0, 230, 118, 0.02));
+  border: 1px solid rgba(0, 230, 118, 0.3);
+  border-radius: 16px;
+  padding: 22px 26px;
+  box-shadow: 0 0 30px rgba(0, 230, 118, 0.08);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.featured-chain:hover {
+  border-color: rgba(0, 230, 118, 0.55);
+  box-shadow: 0 0 40px rgba(0, 230, 118, 0.14);
+}
+
+.featured-chain-icon {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(0, 230, 118, 0.12);
+  border: 1px solid rgba(0, 230, 118, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-green);
+}
+
+.featured-chain-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.featured-chain-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.featured-chain-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-green);
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  box-shadow: 0 0 6px var(--accent-green);
+}
+
+.featured-chain-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.featured-chain-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  max-width: 620px;
+}
+
+.featured-chain-cta {
+  flex-shrink: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-green);
+  white-space: nowrap;
+}
+
+.chains-secondary {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.chains-secondary-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.brands {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 12px 0;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -600,6 +701,16 @@ nav.navbar {
 
   .brands {
     gap: 32px;
+  }
+
+  .featured-chain {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .featured-chain-cta {
+    align-self: flex-start;
   }
 }
 

@@ -110,6 +110,11 @@ export default function Checker() {
                 </span>
               )}
             </div>
+            {result.explorerUrl && (
+              <a className="explorer-link" href={result.explorerUrl} target="_blank" rel="noreferrer">
+                View on Explorer ↗
+              </a>
+            )}
           </div>
 
           <ul className="checks-list">

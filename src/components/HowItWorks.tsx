@@ -19,7 +19,7 @@ const steps = [
       </svg>
     ),
     title: 'Automated deep scan',
-    desc: "We query on-chain data and GoPlus Security's threat database for honeypot, ownership, and liquidity risks.",
+    desc: "We query on-chain data and GoPlus Security's threat database for honeypot, ownership, and liquidity risks — tuned first for Robinhood Chain, and available across every EVM network we support plus Solana.",
   },
   {
     icon: (
