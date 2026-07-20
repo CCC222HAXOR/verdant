@@ -8,7 +8,7 @@ export default function Hero() {
       <IconPipeline />
 
       <div className="hero-content">
-        <span className="hero-eyebrow">Trust nothing. Scan everything.</span>
+        <span className="hero-eyebrow">&gt; BUREAU_OS // ONLINE_ — The On-Chain Crime Bureau</span>
         <h1 className="hero-heading">
           The simple way
           <strong>to catch rugs before they catch you</strong>

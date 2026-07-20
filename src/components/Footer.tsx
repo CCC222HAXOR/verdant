@@ -8,20 +8,10 @@ export default function Footer() {
       <div className="footer-top">
         <div className="footer-brand">
           <span className="nav-logo">
-            <svg className="logo-mark" viewBox="0 0 32 40" aria-hidden="true">
-              <path
-                d="M16 2 C24 10 28 18 28 25 C28 33 22 38 16 38 C10 38 4 33 4 25 C4 18 8 10 16 2 Z"
-                fill="none"
-                stroke="#00e676"
-                strokeWidth={3}
-                strokeLinejoin="round"
-              />
-              <path d="M10.5 19.5 L16.5 17.5 L13.5 24.5 Z" fill="#062615" />
-              <rect x="17.5" y="21" width="6" height="2.4" rx="1.2" fill="#eafff2" />
-            </svg>
-            VERDANT
+            <img className="logo-mark" src="/funkrithm-logo.png" alt="" />
+            FUNKRITHM
           </span>
-          <p className="footer-tagline">Trust nothing. Scan everything.</p>
+          <p className="footer-tagline">The on-chain crime bureau.</p>
           <p className="footer-blurb">
             Fully automated rug, honeypot, and scam-pattern scanner — built first for Robinhood Chain, and covering
             every major EVM network plus Solana.
@@ -55,13 +45,13 @@ export default function Footer() {
             Twitter / X
           </a>
           <a href={BUY_LINK} target="_blank" rel="noreferrer">
-            Buy $VERDANT
+            Buy $FUNKRITHM
           </a>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <span>© {year} VERDANT. All scan results are automated and informational only — not financial advice.</span>
+        <span>© {year} FUNKRITHM. All scan results are automated and informational only — not financial advice.</span>
       </div>
     </footer>
   )

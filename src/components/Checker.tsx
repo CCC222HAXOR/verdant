@@ -1,5 +1,6 @@
 import { FormEvent, useState } from 'react'
 import { Check, ChainKind, EVM_CHAINS, ScanResult, scanEvmToken, scanSolanaToken, Verdict } from '../lib/goplus'
+import CheckModal from './CheckModal'
 
 const VERDICT_COPY: Record<Verdict, { label: string; className: string }> = {
   low: { label: 'Low Risk', className: 'verdict-low' },
@@ -19,6 +20,7 @@ export default function Checker() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [result, setResult] = useState<ScanResult | null>(null)
+  const [activeCheck, setActiveCheck] = useState<Check | null>(null)
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
@@ -119,12 +121,15 @@ export default function Checker() {
 
           <ul className="checks-list">
             {result.checks.map((check) => (
-              <li key={check.id} className="check-row">
-                <StatusDot status={check.status} />
-                <div>
-                  <div className="check-label">{check.label}</div>
-                  <div className="check-detail">{check.detail}</div>
-                </div>
+              <li key={check.id}>
+                <button type="button" className="check-row" onClick={() => setActiveCheck(check)}>
+                  <StatusDot status={check.status} />
+                  <div>
+                    <div className="check-label">{check.label}</div>
+                    <div className="check-detail">{check.detail}</div>
+                  </div>
+                  <span className="check-expand">Details ›</span>
+                </button>
               </li>
             ))}
           </ul>
@@ -135,6 +140,8 @@ export default function Checker() {
           </p>
         </div>
       )}
+
+      {activeCheck && <CheckModal check={activeCheck} onClose={() => setActiveCheck(null)} />}
     </section>
   )
 }

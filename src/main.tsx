@@ -7,6 +7,8 @@ import './styles/howitworks.css'
 import './styles/faq.css'
 import './styles/ticker.css'
 import './styles/footer.css'
+import './styles/securitychecks.css'
+import './styles/modal.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

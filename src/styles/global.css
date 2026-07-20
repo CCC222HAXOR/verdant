@@ -3,8 +3,8 @@
   --surface: #111118;
   --text: #f0f0f5;
   --text-muted: #8888a8;
-  --accent: #7dffb3;
-  --accent-green: #00e676;
+  --accent: #73E176;
+  --accent-green: #00C805;
   --border: rgba(255, 255, 255, 0.08);
 }
 
@@ -70,9 +70,11 @@ nav.navbar {
 }
 
 .nav-logo .logo-mark {
-  width: 18px;
-  height: 22px;
-  filter: drop-shadow(0 0 4px rgba(0, 230, 118, 0.5));
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: drop-shadow(0 0 5px rgba(0, 200, 5, 0.55));
 }
 
 .nav-menu {
@@ -155,13 +157,13 @@ nav.navbar {
   border: 1px solid var(--accent-green);
   color: #06120b;
   font-weight: 600;
-  box-shadow: 0 0 20px rgba(0, 230, 118, 0.35);
+  box-shadow: 0 0 20px rgba(0, 200, 5, 0.35);
 }
 
 .btn-buy:hover {
-  background: #33ff94;
-  border-color: #33ff94;
-  box-shadow: 0 0 26px rgba(0, 230, 118, 0.55);
+  background: #33D337;
+  border-color: #33D337;
+  box-shadow: 0 0 26px rgba(0, 200, 5, 0.55);
 }
 
 .menu-toggle {
@@ -193,22 +195,22 @@ nav.navbar {
   background: radial-gradient(
       circle at 50% -70%,
       transparent 60%,
-      rgba(0, 230, 118, 0.03) 63%,
-      rgba(0, 230, 118, 0.08) 65%,
-      rgba(0, 230, 118, 0.16) 67%,
-      rgba(0, 230, 118, 0.28) 69%,
-      rgba(0, 230, 118, 0.4) 71%,
-      rgba(0, 230, 118, 0.52) 73%,
-      rgba(0, 230, 118, 0.64) 75%,
-      rgba(0, 230, 118, 0.74) 77%,
-      rgba(0, 230, 118, 0.82) 79%,
-      rgba(60, 240, 150, 0.92) 85%,
-      rgba(130, 250, 190, 0.88) 87%,
-      rgba(210, 255, 230, 0.92) 91%,
-      rgba(240, 255, 245, 0.98) 93%,
+      rgba(0, 200, 5, 0.03) 63%,
+      rgba(0, 200, 5, 0.08) 65%,
+      rgba(0, 200, 5, 0.16) 67%,
+      rgba(0, 200, 5, 0.28) 69%,
+      rgba(0, 200, 5, 0.4) 71%,
+      rgba(0, 200, 5, 0.52) 73%,
+      rgba(0, 200, 5, 0.64) 75%,
+      rgba(0, 200, 5, 0.74) 77%,
+      rgba(0, 200, 5, 0.82) 79%,
+      rgba(64, 214, 68, 0.92) 85%,
+      rgba(115, 225, 118, 0.88) 87%,
+      rgba(173, 237, 175, 0.92) 91%,
+      rgba(217, 247, 218, 0.98) 93%,
       #ffffff 95%
     ),
-    radial-gradient(circle at 50% 35%, rgba(0, 255, 140, 0.08) 0%, transparent 50%);
+    radial-gradient(circle at 50% 35%, rgba(0, 200, 5, 0.08) 0%, transparent 50%);
   z-index: 0;
   pointer-events: none;
 }
@@ -272,7 +274,7 @@ nav.navbar {
   left: 50%;
   transform: translate(-50%, -50%) scale(0.4);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(57, 255, 140, 0.6) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 200, 5, 0.6) 0%, transparent 70%);
   opacity: 0;
   z-index: 2;
   pointer-events: none;
@@ -418,7 +420,7 @@ nav.navbar {
   display: block;
   font-weight: 400;
   margin-top: 4px;
-  background: linear-gradient(to right, #ffffff, #7dffb3);
+  background: linear-gradient(to right, #ffffff, #73E176);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -440,14 +442,14 @@ nav.navbar {
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.9rem;
-  box-shadow: 0 0 24px rgba(0, 230, 118, 0.4);
+  box-shadow: 0 0 24px rgba(0, 200, 5, 0.4);
   transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .btn-cta:hover {
   opacity: 0.9;
   transform: translateY(-1px);
-  box-shadow: 0 0 30px rgba(0, 230, 118, 0.55);
+  box-shadow: 0 0 30px rgba(0, 200, 5, 0.55);
 }
 
 /* ===================== BRANDS / CHAINS ROW ===================== */
@@ -462,17 +464,17 @@ nav.navbar {
   display: flex;
   align-items: center;
   gap: 20px;
-  background: linear-gradient(135deg, rgba(0, 230, 118, 0.1), rgba(0, 230, 118, 0.02));
-  border: 1px solid rgba(0, 230, 118, 0.3);
+  background: linear-gradient(135deg, rgba(0, 200, 5, 0.1), rgba(0, 200, 5, 0.02));
+  border: 1px solid rgba(0, 200, 5, 0.3);
   border-radius: 16px;
   padding: 22px 26px;
-  box-shadow: 0 0 30px rgba(0, 230, 118, 0.08);
+  box-shadow: 0 0 30px rgba(0, 200, 5, 0.08);
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .featured-chain:hover {
-  border-color: rgba(0, 230, 118, 0.55);
-  box-shadow: 0 0 40px rgba(0, 230, 118, 0.14);
+  border-color: rgba(0, 200, 5, 0.55);
+  box-shadow: 0 0 40px rgba(0, 200, 5, 0.14);
 }
 
 .featured-chain-icon {
@@ -480,8 +482,8 @@ nav.navbar {
   width: 46px;
   height: 46px;
   border-radius: 12px;
-  background: rgba(0, 230, 118, 0.12);
-  border: 1px solid rgba(0, 230, 118, 0.3);
+  background: rgba(0, 200, 5, 0.12);
+  border: 1px solid rgba(0, 200, 5, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;

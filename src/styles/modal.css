@@ -1,0 +1,121 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 2000;
+}
+
+.modal-card {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.modal-status {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.modal-status.status-good {
+  color: var(--accent-green);
+  background: rgba(0, 200, 5, 0.12);
+}
+
+.modal-status.status-warn {
+  color: #ffc107;
+  background: rgba(255, 193, 7, 0.12);
+}
+
+.modal-status.status-danger {
+  color: #ff5252;
+  background: rgba(255, 82, 82, 0.12);
+}
+
+.modal-status.status-unknown {
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.modal-title {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding-right: 30px;
+}
+
+.modal-result {
+  margin: 0 0 20px;
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.6;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+}
+
+.modal-section {
+  margin-top: 18px;
+}
+
+.modal-section-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.modal-section p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+@media (max-width: 600px) {
+  .modal-card {
+    padding: 24px 20px;
+  }
+}

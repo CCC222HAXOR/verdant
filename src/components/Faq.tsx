@@ -7,7 +7,7 @@ const faqs = [
   },
   {
     q: 'Why build around Robinhood Chain?',
-    a: "It's an Arbitrum-powered EVM L2 that launched with Uniswap v2/v3/v4 live on day one — every check VERDANT runs is tuned and tested there first, before rolling out to other networks.",
+    a: "It's an Arbitrum-powered EVM L2 that launched with Uniswap v2/v3/v4 live on day one — every check FUNKRITHM runs is tuned and tested there first, before rolling out to other networks.",
   },
   {
     q: 'Where does the scan data come from?',
@@ -15,10 +15,10 @@ const faqs = [
   },
   {
     q: 'Is a "Low Risk" verdict a guarantee the token is safe?',
-    a: 'No. VERDANT is an automated first pass, not financial advice. Always verify contracts, liquidity locks, and team info yourself before trading.',
+    a: 'No. FUNKRITHM is an automated first pass, not financial advice. Always verify contracts, liquidity locks, and team info yourself before trading.',
   },
   {
-    q: 'Does VERDANT store the addresses I scan?',
+    q: 'Does FUNKRITHM store the addresses I scan?',
     a: 'No. Scans run directly from your browser to GoPlus — nothing is logged or stored on our end.',
   },
 ]

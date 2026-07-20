@@ -152,8 +152,8 @@
 }
 
 .verdict-low {
-  background: rgba(0, 230, 118, 0.08);
-  border-color: rgba(0, 230, 118, 0.3);
+  background: rgba(0, 200, 5, 0.08);
+  border-color: rgba(0, 200, 5, 0.3);
 }
 .verdict-low .verdict-label {
   color: var(--accent-green);
@@ -192,15 +192,42 @@
 }
 
 .check-row {
+  width: 100%;
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  padding: 12px 4px;
+  padding: 12px 8px;
+  border-radius: 8px;
+  border: none;
+  background: none;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.check-row:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.checks-list > li {
   border-bottom: 1px solid var(--border);
 }
 
-.check-row:last-child {
+.checks-list > li:last-child {
   border-bottom: none;
+}
+
+.check-expand {
+  margin-left: auto;
+  flex-shrink: 0;
+  align-self: center;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.check-row:hover .check-expand {
+  opacity: 1;
 }
 
 .status-dot {
@@ -213,7 +240,7 @@
 
 .status-good {
   background: var(--accent-green);
-  box-shadow: 0 0 6px rgba(0, 230, 118, 0.6);
+  box-shadow: 0 0 6px rgba(0, 200, 5, 0.6);
 }
 
 .status-warn {

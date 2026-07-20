@@ -147,11 +147,11 @@ export default function IconPipeline() {
             <feComposite in="blur" in2="SourceGraphic" operator="over" />
           </filter>
           <linearGradient id="beam-gradient" gradientUnits="userSpaceOnUse" ref={gradientRef}>
-            <stop offset="0%" stopColor="#00e676" stopOpacity="0" />
-            <stop offset="20%" stopColor="#00e676" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#00C805" stopOpacity="0" />
+            <stop offset="20%" stopColor="#00C805" stopOpacity="0.8" />
             <stop offset="50%" stopColor="#fff" stopOpacity="1" />
-            <stop offset="80%" stopColor="#7dffb3" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#7dffb3" stopOpacity="0" />
+            <stop offset="80%" stopColor="#73E176" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="#73E176" stopOpacity="0" />
           </linearGradient>
         </defs>
         <path ref={glowPathRef} stroke="url(#beam-gradient)" strokeWidth={2} filter="url(#glow)" fill="none" opacity={0.6} />
