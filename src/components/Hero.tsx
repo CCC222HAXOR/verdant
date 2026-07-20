@@ -8,6 +8,7 @@ export default function Hero() {
       <IconPipeline />
 
       <div className="hero-content">
+        <span className="hero-eyebrow">Trust nothing. Scan everything.</span>
         <h1 className="hero-heading">
           The simple way
           <strong>to catch rugs before they catch you</strong>

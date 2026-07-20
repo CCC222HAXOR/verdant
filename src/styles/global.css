@@ -69,12 +69,10 @@ nav.navbar {
   gap: 8px;
 }
 
-.nav-logo .logo-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent-green);
-  box-shadow: 0 0 8px var(--accent-green);
+.nav-logo .logo-mark {
+  width: 18px;
+  height: 22px;
+  filter: drop-shadow(0 0 4px rgba(0, 230, 118, 0.5));
 }
 
 .nav-menu {
@@ -395,6 +393,17 @@ nav.navbar {
 .hero-content {
   max-width: 620px;
   z-index: 1;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-green);
+  margin-bottom: 16px;
 }
 
 .hero-heading {
